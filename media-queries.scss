@@ -1,0 +1,604 @@
+$color-accent: #F16214;
+
+
+
+
+@media (min-width: 1920px) {
+    //-----------------HEADER--------------------//
+    .header__section {
+        height: 1000px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1919px){
+    //----------------HOW-TO-WORK----------------// 
+
+    .work__section {
+        background-size: 50%;
+        padding: 158px 0 80px 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    //-----------------HEADER--------------------//
+    .header__section {
+        &::after {
+            width: 82%;
+            left: 18%;
+        }
+    }
+
+    .header-content {
+        &__txt-wrapper,
+        &__socials {
+            padding: 0 0 0 24px;
+        }
+
+        &__btn {
+            margin: 0 0 0 24px;
+        }
+
+        
+
+        
+    }
+
+    //----------------HOW-TO-WORK----------------// 
+
+    .work__section {
+        background-size: 50%;
+        background-position: 0 50%;
+        padding: 158px 0 20px;
+
+    }
+
+    //----------------APP-------------------// 
+
+    .app {
+        &::after,
+        &::before {
+            width: 200px;
+            height: 433px;
+            //border: 1px solid rgb(255, 0, 0);
+            background-size: 158%;
+            background-position: -47px -42px;
+            top: -19px;
+        }
+
+        &::before {
+            right: 270px;
+        }
+
+        &::after {
+            right: 30px;
+        }
+    }
+}
+
+@media /*(min-width: 768px) and */ (max-width: 991px) {
+    //---------------COMMON----------------------// 
+
+    .services__section,
+    .product__section,
+    .app__section,
+    .reviews__section,
+    .subscribe__section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    
+
+   //-----------------HEADER--------------------//
+   
+    .header__section {
+        &::after {
+            width: 91%;
+            left: 9%;
+        }
+    }
+
+    .header-top {
+        background-color: #fff;
+        padding: 0 16px;
+        width: 100%;
+        position: fixed;
+        
+        z-index: 2;
+
+        &__menu {
+            margin-right: 0;
+            justify-content: end;
+        }
+    }
+
+    .header-content {
+        
+        &__txt-wrapper,
+        &__socials {
+            padding: 0 0 0 24px;
+        }
+
+        &__btn {
+            margin: 0 0 0 24px;
+        }
+    }
+
+    //----------------HOW-TO-WORK----------------// 
+
+    .work__section {
+        background-size: 50%;
+        background-position: 0 50%;
+        padding: 50px 0;
+    }
+
+   //----------------APP-------------------// 
+
+    .app__section {
+        padding: 40px 0;
+    }
+
+   .app {
+
+        justify-content: center;
+
+        &::after,
+        &::before {
+            content: none;
+        }
+
+        &__heading {
+            text-align: center;
+        }
+
+    
+    }
+
+    //---------------SUBSCRIBE---------------//  
+
+    .subscribe {
+        &::after {
+            left: 0;
+            width: 380px;
+            height: 380px;
+           transform: translate(0, -12%);
+        }
+    }
+
+    //---------------FOOTER-------------//
+
+    .footer__section {
+        padding-top: 50px;
+    }
+}
+
+@media /* (min-width: 480px) and */ (max-width: 767px) {
+    //-----------------HEADER--------------------//
+    .header__section {
+        &::after {
+            width: 100%;
+            left: 0%;
+        }
+
+        
+    }
+
+    .header-top {
+        //background-color: green;
+        //position: relative;
+        width: 100%;
+        justify-content: space-between;
+        
+
+       
+		/* &__logo {
+            z-index: 8;
+            background-color: #fff;
+           
+        } */
+        
+        &__menu {
+            
+            background-color: rgba(0, 0, 0, .9);
+            width: 100%;
+            transition: top 0.3s ease 0s;
+            position: fixed;
+            top: -100%;
+            left: 0;
+            z-index: 2;
+            height: 100vh;
+        
+            overflow: auto;
+            display: block;
+           
+            padding: 100px 0 0 0;
+        
+            & li {
+                height: initial;
+                padding: 20px 0 20px 20px;
+                text-align: left;
+                //color: #fff;
+   
+            }
+        
+            & a {
+                font-size: 42px;
+                color: #fff;
+                
+            }
+        
+            &._active {
+                top: 0;                
+        
+            }
+
+            &._active::after {
+                content: "";
+                width: 100%;
+                height: 100px;
+                background-color: $color-accent;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 8;
+                transition: all 0.3s ease 0s;
+                
+            }
+
+            
+        }
+        &__register {
+            background-color: transparent;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+        
+    }
+
+    .menu-burger {
+		display: block;
+		width: 64px;
+		height: 40px;
+		position: relative;
+		z-index: 5;
+		cursor: pointer;
+
+		&::before,
+		&::after {
+			content: "";
+			width: 100%;
+			height: 20%;
+			background-color: $color-accent;
+			position: absolute;
+			left: 0;
+			transition: all 0.3s ease 0s;
+			
+		}
+
+		&::before {
+			
+			top: 0;
+		}
+
+		&::after {
+			
+			bottom: 0;
+		}
+
+		span {
+			//display: block;
+			transition: all 0.3s ease 0s;
+			background-color: $color-accent;
+			position: absolute;
+			width: 100%;
+			height: 20%;
+			left: 0;
+			top: 50%; 
+			transform: scale(1) translate(0px, -50%);
+		}
+
+		&._active {
+			&::before {
+				transform: rotate(45deg);
+				top: 50%;
+                background-color: #fff;
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+				top: 50%;
+                background-color: #fff;
+			}
+
+			span {
+				//visibility: none;
+				//display: none;
+				transform: scale(0) translate(0px, -50%);
+                background-color: #fff;
+
+			}
+		}
+
+        
+
+	}
+
+    .header-content {
+        &__heading {
+            font-size: 42px;
+            line-height: 54px;
+        }
+
+        &__btn {
+            margin: 0 0 0 24px;
+        }
+    }
+
+    //---------HOW-TO-WORK--------------// 
+
+    .work__section {
+        padding: 100px 0;
+    }
+
+
+    //-----------------REVIEWS-----------------// 
+
+    .reviews__section {
+        padding: 40px 60px;
+    }
+
+    .reviews {
+        &-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__txt-wrapper {
+            max-width: 100%;
+        };
+
+        &__img {
+            height: 250px;
+            min-width: 100%;
+        } 
+    }
+
+    //---------------SUBSCRIBE---------------//  
+    .subscribe__section {
+        padding: 50px 0;
+    }
+
+
+    .subscribe {
+    
+     
+        max-height: 100%;
+        
+        &::after {
+            top: 50%;
+            left: 4%;
+            width: 260px;
+            height: 260px;
+            transform: translate(0, -52%);
+        }
+    }
+
+    //-------------------FOOTER-----------------// 
+
+    .footer {
+
+        &-content {
+            flex-wrap: wrap;
+            align-items: start;
+            align-content: center;
+        }
+
+        &__logo {
+            text-align: center;
+        }
+
+        &-item {
+            padding: 0 20px;
+            //border: 1px solid #000;
+            margin: 0 0 30px 0;
+        }
+
+        &__heading,
+        &__txt,
+        &-list__item {
+            text-align: center;
+        }
+
+        &__socials {
+            //border: 1px solid #000;
+            justify-content: center;
+        }
+
+    }
+
+    
+}
+
+
+@media (max-width: 579px) {
+    //-----------------HEADER--------------------//
+    .header__section {
+       
+
+
+        &::after {
+            width: 181%;
+            height: 72%;
+            left: -5%;
+            top: 12%;
+           
+        }
+    }
+
+    //----------------FEATURES---------------------// 
+
+    .features {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        &-card {
+            flex: 1 1 100%;
+            //margin: 24px 0;
+            padding: 32px 0;
+
+            &::after {
+                
+           
+                top: 63%;
+                right: 50%;
+                transform: rotate(90deg) translate(-50%, 0);
+             
+            }
+            
+        }
+    }
+
+    //---------HOW-TO-WORK--------------// 
+
+    .work__section {
+        background-image: none;
+    }
+
+    .work {
+        &-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & h3 {
+                text-align: center;
+            }
+        }
+
+
+    }
+
+    //-----------------SErVICES-------------------// 
+
+    .services {
+
+        &-content {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &-card {
+            margin: 0 0 30px 0;
+        }
+    }
+
+    //---------------SUBSCRIBE---------------//  
+
+    .subscribe {
+        justify-content: center;
+        max-height: 100%;
+
+
+        &::after {
+            content: none;
+        }
+
+        &-content {
+            max-width: 100%;
+            padding: 42px;
+            & p {
+                text-align: center;
+            }
+        }
+
+        &__heading {
+            text-align: center;
+        }
+    }
+    
+}
+
+
+@media /*(min-width: 320px) and */ (max-width: 479px) {
+    //-----------------HEADER--------------------//
+    .header__section {
+       
+        min-height: 100%;
+
+
+        &::before {
+            background-image: none
+        }
+
+        &::after {
+            background-image: none;
+           
+        }
+    }
+
+    
+
+    .header-content {
+        &__txt-wrapper {
+            width: 100%;
+            padding: 0 24px;
+        }
+    }
+
+    //------------------APP------------------// 
+
+    .app {
+
+        height: 450px;
+
+        &__btn-block {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__btn {
+            margin: 0 0 30px 0;
+        }
+
+        &__heading {
+            margin: 0 0 30px 0;
+        }
+    }
+
+    //-------------REVIEWS--------------// 
+    
+    .reviews__section {
+        padding: 20px 20px;
+    }
+
+    //---------------SUBSCRIBE---------------//  
+
+    .subscribe {
+        
+        &__btn {
+            width: 80px;
+            font-size: 12px;
+        }
+    }
+}
+
+
+
+
+@media (max-width: 320px) {
+    //-------------COMMON--------------// 
+
+    .section__heading {
+        font-size: 32px;
+    }
+
+    //-------------REVIEWS--------------// 
+    
+    .reviews__section {
+        padding: 10px 10px;
+    }
+}
